@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+    <script src="ejs.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+    <script src="cordova.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyD2PflQpsiu2yNB0kAAaPZ1t7OL_f86HeE",
+            authDomain: "shopee-2428c.firebaseapp.com",
+        };
+        firebase.initializeApp(config);
+
+
+
+    </script>
+</head>
+
+<body>
+
+
+    <ons-page>
+        <ons-toolbar>
+            <div class="center" id="appname">ออกจากระบบ</div>
+
+            <div class="left">
+                <ons-toolbar-button>
+                    <i style="color: tomato; font-size: 20px;" class="zmdi zmdi-shopping-basket" onclick="backhome()"></i>
+                </ons-toolbar-button>
+            </div>
+            <div class="right">
+                <ons-toolbar-button>
+                    <i style="color: tomato; font-size: 20px;" class="zmdi zmdi-pin-help"></i>
+                </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+
+        <div class="center" style="text-align: center; margin-top:50%; ">
+            ท่านต้องการออกจากระบบหรือไม่ ?
+            <br>
+            <ons-button onclick="logout()">Sign Out</ons-button>
+        </div>
+
+        <script>
+
+            function logout() {
+                firebase.auth().signOut().then(function () {
+                    ons.notification.alert('see you agian');
+                    window.location.href = 'login.html';
+                }).catch(function (error) {
+                    // An error happened.
+                });
+            }
+
+            function backhome() {
+                window.location.href = 'index.html';
+            }
+
+        </script>
+
+
+</body>
+
+</html>

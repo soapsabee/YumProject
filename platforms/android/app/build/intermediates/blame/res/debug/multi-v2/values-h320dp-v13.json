@@ -1,0 +1,48 @@
+{
+    "logs": [
+        {
+            "outputFile": "E:\\Cordova\\ProjectCordova\\977-341cordova\\hello\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h320dp-v13\\values-h320dp-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Soapsabye\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.0.aar\\602669b607d30c2b565c23f7f55d3b87\\res\\values-h320dp\\values-h320dp.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "4",
+                        "startOffsets": "289",
+                        "endColumns": "57",
+                        "endOffsets": "342"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "57",
+                        "endOffsets": "108"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "E:\\Cordova\\CordovaShopee\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h320dp-v13\\values-h320dp-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Soapsabye\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.0.aar\\602669b607d30c2b565c23f7f55d3b87\\res\\values-h320dp\\values-h320dp.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "4",
+                        "startOffsets": "289",
+                        "endColumns": "57",
+                        "endOffsets": "342"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "57",
+                        "endOffsets": "108"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,4 @@
+#Sun Nov 11 17:45:45 ICT 2018
+base.0=E\:\\Cordova\\CordovaShopee\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex
