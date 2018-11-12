@@ -24,20 +24,20 @@
         "source": "E:\\Cordova\\CordovaShopee\\platforms\\android\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_previous_item.png"
     },
     {
-        "merged": "E:\\Cordova\\ProjectCordova\\977-341cordova\\hello\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ratingbar_full_material.xml.flat",
-        "source": "C:\\Users\\Soapsabye\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.0.aar\\602669b607d30c2b565c23f7f55d3b87\\res\\drawable\\abc_ratingbar_full_material.xml"
-    },
-    {
         "merged": "E:\\Cordova\\CordovaShopee\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_media_cancel_action.xml.flat",
         "source": "C:\\Users\\Soapsabye\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.0.aar\\602669b607d30c2b565c23f7f55d3b87\\res\\layout\\notification_media_cancel_action.xml"
     },
     {
-        "merged": "E:\\Cordova\\CordovaShopee\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_abc_ic_go_search_api_mtrl_alpha.png.flat",
-        "source": "C:\\Users\\Soapsabye\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.0.aar\\602669b607d30c2b565c23f7f55d3b87\\res\\drawable-hdpi\\abc_ic_go_search_api_mtrl_alpha.png"
+        "merged": "E:\\Cordova\\ProjectCordova\\977-341cordova\\hello\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ratingbar_full_material.xml.flat",
+        "source": "C:\\Users\\Soapsabye\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.0.aar\\602669b607d30c2b565c23f7f55d3b87\\res\\drawable\\abc_ratingbar_full_material.xml"
     },
     {
         "merged": "E:\\Cordova\\CordovaShopee\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_abc_ic_go_search_api_mtrl_alpha.png.flat",
         "source": "C:\\Users\\Soapsabye\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.0.aar\\602669b607d30c2b565c23f7f55d3b87\\res\\drawable-xxhdpi\\abc_ic_go_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "E:\\Cordova\\CordovaShopee\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_abc_ic_go_search_api_mtrl_alpha.png.flat",
+        "source": "C:\\Users\\Soapsabye\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.0.aar\\602669b607d30c2b565c23f7f55d3b87\\res\\drawable-hdpi\\abc_ic_go_search_api_mtrl_alpha.png"
     },
     {
         "merged": "E:\\Cordova\\CordovaShopee\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-port-xxhdpi_screen.png.flat",
@@ -92,20 +92,20 @@
         "source": "C:\\Users\\Soapsabye\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.0.aar\\602669b607d30c2b565c23f7f55d3b87\\res\\color\\abc_primary_text_material_light.xml"
     },
     {
-        "merged": "E:\\Cordova\\ProjectCordova\\977-341cordova\\hello\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_abc_list_focused_holo.9.png.flat",
-        "source": "C:\\Users\\Soapsabye\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.0.aar\\602669b607d30c2b565c23f7f55d3b87\\res\\drawable-xhdpi\\abc_list_focused_holo.9.png"
-    },
-    {
         "merged": "E:\\Cordova\\CordovaShopee\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_abc_ab_share_pack_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Soapsabye\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.0.aar\\602669b607d30c2b565c23f7f55d3b87\\res\\drawable-xxhdpi\\abc_ab_share_pack_mtrl_alpha.9.png"
     },
     {
-        "merged": "E:\\Cordova\\ProjectCordova\\977-341cordova\\hello\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_popup_enter.xml.flat",
-        "source": "C:\\Users\\Soapsabye\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.0.aar\\602669b607d30c2b565c23f7f55d3b87\\res\\anim\\abc_popup_enter.xml"
+        "merged": "E:\\Cordova\\ProjectCordova\\977-341cordova\\hello\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_abc_list_focused_holo.9.png.flat",
+        "source": "C:\\Users\\Soapsabye\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.0.aar\\602669b607d30c2b565c23f7f55d3b87\\res\\drawable-xhdpi\\abc_list_focused_holo.9.png"
     },
     {
         "merged": "E:\\Cordova\\ProjectCordova\\977-341cordova\\hello\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_abc_ab_share_pack_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Soapsabye\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.0.aar\\602669b607d30c2b565c23f7f55d3b87\\res\\drawable-mdpi\\abc_ab_share_pack_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "E:\\Cordova\\ProjectCordova\\977-341cordova\\hello\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_popup_enter.xml.flat",
+        "source": "C:\\Users\\Soapsabye\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.0.aar\\602669b607d30c2b565c23f7f55d3b87\\res\\anim\\abc_popup_enter.xml"
     },
     {
         "merged": "E:\\Cordova\\CordovaShopee\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_abc_scrubber_primary_mtrl_alpha.9.png.flat",
@@ -120,12 +120,12 @@
         "source": "C:\\Users\\Soapsabye\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.0.aar\\602669b607d30c2b565c23f7f55d3b87\\res\\drawable-mdpi\\abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
-        "merged": "E:\\Cordova\\ProjectCordova\\977-341cordova\\hello\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_abc_scrubber_primary_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\Soapsabye\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.0.aar\\602669b607d30c2b565c23f7f55d3b87\\res\\drawable-xhdpi\\abc_scrubber_primary_mtrl_alpha.9.png"
-    },
-    {
         "merged": "E:\\Cordova\\ProjectCordova\\977-341cordova\\hello\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_abc_ic_menu_share_mtrl_alpha.png.flat",
         "source": "C:\\Users\\Soapsabye\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.0.aar\\602669b607d30c2b565c23f7f55d3b87\\res\\drawable-xxhdpi\\abc_ic_menu_share_mtrl_alpha.png"
+    },
+    {
+        "merged": "E:\\Cordova\\ProjectCordova\\977-341cordova\\hello\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_abc_scrubber_primary_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\Soapsabye\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.0.aar\\602669b607d30c2b565c23f7f55d3b87\\res\\drawable-xhdpi\\abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
         "merged": "E:\\Cordova\\ProjectCordova\\977-341cordova\\hello\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xhdpi_abc_ic_menu_copy_mtrl_am_alpha.png.flat",

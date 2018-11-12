@@ -7,7 +7,7 @@
             <path url="/__/auth/callback" />
         </host>
     </universal-links>
-    <name>HelloWorld</name>
+    <name>Shopee055</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
     </description>
