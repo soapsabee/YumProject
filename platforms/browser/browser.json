@@ -19,29 +19,29 @@
   },
   "installed_plugins": {
     "cordova-plugin-compat": {
-      "PACKAGE_NAME": "com.patiphan.hello"
+      "PACKAGE_NAME": "com.patiphan.shopee"
     },
     "cordova-plugin-browsertab": {
-      "PACKAGE_NAME": "com.patiphan.hello"
+      "PACKAGE_NAME": "com.patiphan.shopee"
     },
     "cordova-plugin-buildinfo": {
-      "PACKAGE_NAME": "com.patiphan.hello"
+      "PACKAGE_NAME": "com.patiphan.shopee"
     },
     "cordova-plugin-customurlscheme": {
       "URL_SCHEME": "com.firebase.cordova",
-      "PACKAGE_NAME": "com.patiphan.hello"
+      "PACKAGE_NAME": "com.patiphan.shopee"
     },
     "cordova-plugin-inappbrowser": {
-      "PACKAGE_NAME": "com.patiphan.hello"
+      "PACKAGE_NAME": "com.patiphan.shopee"
     },
     "cordova-plugin-qrscanner": {
-      "PACKAGE_NAME": "com.patiphan.hello"
+      "PACKAGE_NAME": "com.patiphan.shopee"
     },
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.patiphan.hello"
+      "PACKAGE_NAME": "com.patiphan.shopee"
     },
     "cordova-universal-links-plugin": {
-      "PACKAGE_NAME": "com.patiphan.hello"
+      "PACKAGE_NAME": "com.patiphan.shopee"
     }
   },
   "dependent_plugins": {},

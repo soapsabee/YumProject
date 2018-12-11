@@ -22,15 +22,14 @@ apply plugin: 'com.android.application'
 buildscript {
     repositories {
         mavenCentral()
+        jcenter()
         maven {
             url "https://maven.google.com"
         }
-        jcenter()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.1'
-       
+        classpath 'com.android.tools.build:gradle:3.0.0'
     }
 }
 
@@ -92,9 +91,9 @@ ext {
 }
 
 // PLUGIN GRADLE EXTENSIONS START
-apply from: "../cordova-plugin-browsertab/hello-BrowserTab.gradle"
-apply from: "../cordova-plugin-buildinfo/hello-BuildInfo.gradle"
-apply from: "../cordova-plugin-qrscanner/hello-qrscanner.gradle"
+apply from: "../cordova-plugin-browsertab/shopee-BrowserTab.gradle"
+apply from: "../cordova-plugin-buildinfo/shopee-BuildInfo.gradle"
+apply from: "../cordova-plugin-qrscanner/shopee-qrscanner.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras = file('build-extras.gradle').exists()
@@ -326,5 +325,3 @@ for (def func : cdvPluginPostBuildExtras) {
 if (hasProperty('postBuildExtras')) {
     postBuildExtras()
 }
-
-apply plugin: 'com.google.gms.google-services'

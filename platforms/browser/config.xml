@@ -1,12 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.patiphan.shopee" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <universal-links>
-        <host name="shopee055.page.link/Tbeh" scheme="https" />
-        <host name="shopee-2428c.firebaseapp.com" scheme="https">
-            <path url="/__/auth/callback" />
-        </host>
-    </universal-links>
-    <name>HelloWorld</name>
+    <name>Shopee055</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
     </description>

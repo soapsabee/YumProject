@@ -1,4 +1,4 @@
-#Tue Nov 13 00:36:37 ICT 2018
-base.0=E\:\\Cordova\\CordovaShopee\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
-path.0=classes.dex
+#Tue Dec 11 15:07:28 ICT 2018
+base.0=D\:\\Soapsabee\\CordovaShopee\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 renamed.0=classes.dex
+file.0=D\:\\Soapsabee\\CordovaShopee\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex

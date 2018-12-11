@@ -12,8 +12,7 @@
     crossorigin="anonymous">
 
   <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 
   <script src="ejs.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
@@ -24,12 +23,11 @@
   <script>
     // Initialize Firebase
     var config = {
-      apiKey: "AIzaSyD2PflQpsiu2yNB0kAAaPZ1t7OL_f86HeE",
-      authDomain: "shopee-2428c.firebaseapp.com",
-      databaseURL: "https://shopee-gi2428c.firebaseio.com",
-      projectId: "shopee-2428c",
-      storageBucket: "shopee-2428c.appspot.com",
-      messagingSenderId: "808649182528"
+      apiKey: "AIzaSyAJIRibfhC67xSdhSJNEgSjah7b1qsEG28",
+      authDomain: "psuproject-e92e0.firebaseapp.com",
+      databaseURL: "https://psuproject-e92e0.firebaseio.com",
+      projectId: "psuproject-e92e0",
+
     };
     firebase.initializeApp(config);
   </script>
@@ -69,10 +67,6 @@
       <ons-tabbar swipeable position="auto" id="tabbar">
         <ons-tab page="tab1.html" label="Home" icon="ion-home, material:md-home" active>
         </ons-tab>
-        <ons-tab page="tab2.html" label="Shop" icon="fa-shopping-bag">
-        </ons-tab>
-        <ons-tab page="tab3.html" label="Cart" icon="fa-shopping-cart" id="badge">
-        </ons-tab>
       </ons-tabbar>
 
     </ons-page>
@@ -88,127 +82,26 @@
 
 
 
-      <ons-carousel swipeable auto-scroll overscrollable id="carousel" style="height: 200px;">
-        <ons-carousel-item id="carousel1">
-
-        </ons-carousel-item>
-
-        <ons-carousel-item id="carousel2">
-
-        </ons-carousel-item>
-        <ons-carousel-item id="carousel3">
-
-        </ons-carousel-item>
-      </ons-carousel>
-
-
       <div>
-        <div id="icons"></div>
 
-        <script id="icon_template" type="text/template">
-              <ons-row class="category" style="margin-top:20px; ">
-              <% categories.forEach(function(category){%>
-          <ons-col style="background: white; height: auto; " width="33%"modifier="nodivider" onclick="ShowFromType('<%= category.name %>')">
+        <ons-row class="category" style="margin-top:20px; ">
+
+          <ons-col style="background: white; height: auto; " width="33%" modifier="nodivider" onclick="ShowFromType('<%= category.name %>')">
             <div class="category_wrapper">
-              <p style="text-align:center;" class="category_thumbnail">
-                <ons-icon size="50px" id="icon1" style="color:tomato"icon="<%= category.icon %>"></ons-icon>       
-              </p>
-              <p id="icon1_text" style="color:black;text-align: center;"><%= category.name %></p>      
+
+
             </div>
-          </ons-col> 
-       
-          <%});%>
-        </ons-row>
-        </script>
-
-
-
+          </ons-col>
 
       </div>
 
+     
 
     </ons-page>
   </template>
 
 
-  <template id="tab2.html">
-    <ons-page id="test">
 
-      <ons-list-header>Shopping Cart</ons-list-header>
-      <div class="itemtitle"></div>
-
-      <div id="item_show"></div>
-
-      <script id="item_template" type="text/template">
-            <% list_item.forEach(function(i){ var item = i.data(); %>
-            <ons-list-item style="background-color: white; ">
-                <div class="left" style="background: url('<%= item.picture[0] %>') no-repeat center; background-size: 50px; width: 50px; height: 50px;">
-                </div>
-                <div class="center">
-                  <span class="list-item__title" >
-                    <div id="item"><%= item.title %></div>
-                  </span>
-                  <span class="list-item__subtitle" style="color: tomato;">
-                    <%= item.price %>
-                  </span>
-                </div>
-                <div class="right">
-                    
-                  <i class="fas fa-angle-double-right" onclick="DetailProduct(<%= item.pid %>)"></i>
-
-                </div>
-              </ons-list-item>
-              <%});%>
-          </script>
-
-      <ons-button style="background-color: burlywood; width: 100%;">
-        <p style="color:white; text-align: center;">เพิ่มสินค้าของคุณ</p>
-
-      </ons-button>
-    </ons-page>
-
-  </template>
-
-
-
-
-  <template id="tab3.html">
-
-    <ons-page id="cart">
-
-      <div id="cart_show">
-
-
-      </div>
-      <div id="non_show" style="text-align: center; margin-top: 200px;">ยังไม่มีสินค้าในตะกร้า</div>
-      <script id="cart_template" type="text/template">
-              <% list_item.forEach(function(i){ var item = i.data(); %>
-              <ons-list-item style="background-color: white; ">
-                  <div class="left" style="background: url('<%= item.picture[0] %>') no-repeat center; background-size: 50px; width: 50px; height: 50px;">
-                  </div>
-                  <div class="center">
-                    <span class="list-item__title" >
-                      <div id="item"><%= item.title %></div>
-                    </span>
-                    <span class="list-item__subtitle" style="color: tomato;">
-                      <%= item.price %>
-                    </span>
-                  </div>
-                  <div class="right">
-                    <i class="fas fa-trash-alt" onclick="getDelete(<%= numDel %>)"></i>
-                   
-                  </div>
-                </ons-list-item>
-                <%});%>
-            </script>
-      <footer class="fixed-bottom" style="position: fixed;height: 65px;bottom: 0;width: 100%; background-color: white">
-        <ons-button style="background-color:tomato; width: 100%;">
-          <p style="color:white; text-align: center;">ยืนยันการชำระเงิน</p>
-        </ons-button>
-      </footer>
-    </ons-page>
-
-  </template>
 
 
 
@@ -219,7 +112,7 @@
         <div class="left">
           <ons-back-button>Back</ons-back-button>
         </div>
-        <div class="center">รายละเอียดสินค้า</div>
+        <div class="center">ข้อมูลยานพาหนะ</div>
 
       </ons-toolbar>
 
@@ -228,49 +121,43 @@
 
       <script id="getDetail" type="text/template">
         <ons-card>
-            <ons-carousel swipeable auto-scroll overscrollable id="carousel" style="height: 300px;">
-                <% list_item.forEach(function(data){  
-                  var data = data.data().picture; %>
-    
-                  <% data.forEach(function(data){   %>
-                    <ons-carousel-item id="carousel1DeP" style="background: url('<%= data %>') no-repeat center; background-size: contain;">  
-                    </ons-carousel-item>
-                    <% })%>                                        
-                    <% })%>
-                  
-             </ons-carousel>
-        <% list_item.forEach(function(i){ var item = i.data(); %>
-        
-          <div class="title" style="margin-top:20px">
-             ชื่อสินค้า <%= item.title %>
-           
-          </div>
+            
+        <% list_item.forEach(function(i){ var item = i.data(); %>       
           <div class="content">
-            <div>
-              ราคา <%= item.price%> บาท
-            </div>
-            <ons-list>
-              
-              <ons-list-item>สภาพใหม่ดี ราคาถูกที่สุด</ons-list-item>
-             
-            </ons-list>
-          </div>
          
+            <img src="<%= item.photo%>" style="width: 100%">
+            <ons-list>
+              <ons-list-item>รุ่น <%= item.brand %></ons-list-item>
+              <ons-list-item>ทะเบียน <%= item.carcode%></ons-list-item>
+              <ons-list-item>สี <%= item.color%></ons-list-item>
+              <ons-list-item>ประเภท <%= item.type%></ons-list-item>
+              <ons-list-item>ชื่อเจ้าของ <%= item.name%></ons-list-item>
+              <ons-list-item>นามสกุล <%= item.lastname%></ons-list-item>
+              <ons-list-item>คณะ <%= item.faculty%></ons-list-item>
+              <ons-list-item>สาขา <%= item.major%></ons-list-item>
+              <ons-list-item>รหัสนักศึกษา <%= item.psucode%></ons-list-item>
+              <ons-list-item>เบอร์โทร <%= item.phone%></ons-list-item>
+            </ons-list>
+          </div> 
+          </ons-card>         
+          <footer class="fixed-bottom" style=" position: fixed;height: 70px;bottom: 0;width: 100%; background-color: white">
           
-      
-          
-          </ons-card>
-          
-          
-          <footer class="fixed-bottom" style="position: fixed;height: 65px;bottom: 0;width: 100%; background-color: white">
-          <ons-button style="background-color: tomato; width: 100%; " onclick="addtocart(<%= item.pid %>),showToast(<%= item.pid %>);">
-              <p style="color:white; text-align: center;">เพิ่มเข้าตะกร้า</p>
-            </ons-button>
+            <ons-row>
+              <ons-col>
+              <ons-button style="background-color: tomato; width: 100%; " onclick="SaveTimein('<%= item.pid %>','<%= item.brand %>','<%= item.carcode %>','<%= item.color %>','<%= item.type %>','<%= item.name %>','<%= item.lastname %>','<%= item.faculty %>','<%= item.major %>','<%= item.psucode%>','<%= item.phone%>','<%= item.photo%>'),showToast();">
+                <p style="color:white; text-align: center;">รถเข้า</p>
+              </ons-button>
+            </ons-col>
+            <ons-col>
+              <ons-button style="background-color: green; width: 100%; " onclick="SaveTimeOut('<%= item.pid %>','<%= item.brand %>','<%= item.carcode %>','<%= item.color %>','<%= item.type %>','<%= item.name %>','<%= item.lastname %>','<%= item.faculty %>','<%= item.major %>','<%= item.psucode%>','<%= item.phone%>','<%= item.photo%>'),showToast();">
+                <p style="color:white; text-align: center;">รถออก</p>
+              </ons-button>
+            </ons-col>
+         
+          </ons-row> 
           </footer>
         
-            <%});%>
-
-         
+            <%});%>     
       </script>
 
     </ons-page>
@@ -285,9 +172,7 @@
   }
 
   getHomeData();
-  getStart();
-  var data = [];
-  var dataTocart = [];
+
   document.addEventListener('prechange', function (event) {
     var type = localStorage.getItem("type")
     var search = localStorage.getItem("search")
@@ -296,34 +181,9 @@
       console.log('Home clicked');
       getHomeData();
     }
-    else if (event.index == 1) {
-      console.log('Show clicked');
-      if (type == null && search == null) {
-        getShowProduct();
-      } else if (type != null) {
-        getShowProduct(type);
-      }
-      localStorage.clear("type");
-      localStorage.clear("search");
-    }
-    else if (event.index == 2) {
-      console.log('Cart clicked');
-      getCartData();
-    }
+
   });
-  function getShowProduct(type) {
-    if (type == null) {
-      var allProductRef = db.collection("PRODUCTS");
-    } else {
-      var allProductRef = db.collection("PRODUCTS").where("category", "==", type);
-    }
-    allProductRef.get().then(function (querySnapshot) {
-      var item = $('#item_template').html();
-      console.log(querySnapshot.docs)
-      var html = ejs.render(item, { list_item: querySnapshot.docs })
-      $('#item_show').html(html);
-    });
-  }
+
   function getHomeData() {
     var docRef = db.collection("shopee").doc("home");
 
@@ -333,15 +193,8 @@
         var data = doc.data();
         console.log("test", data.appname);
         $('#appname').html(data.appname);
-        var style = "background: url('https://firebasestorage.googleapis.com/v0/b/shopee-2428c.appspot.com/o/3.jpg?alt=media&token=3d8ed85a-71ff-4359-b9e6-8d65a23ececb') no-repeat center; background-size:300px;";
-        $('#carousel1').attr('style', style);
-        var style = "background: url('https://firebasestorage.googleapis.com/v0/b/shopee-2428c.appspot.com/o/1.jpg?alt=media&token=82a6352f-51a1-43e1-92dd-daa2e5e9c80f') no-repeat center; background-size:300px;";
-        $('#carousel2').attr('style', style);
-        var style = "background: url('https://firebasestorage.googleapis.com/v0/b/shopee-2428c.appspot.com/o/2.jpg?alt=media&token=3c14480f-29a4-41f8-8ba3-f708d27e1983') no-repeat center; background-size:300px;";
-        $('#carousel3').attr('style', style);
-        var icon_template = $('#icon_template').html();
-        var html = ejs.render(icon_template, { categories: data.categories });
-        $('#icons').html(html);
+
+
       } else {
         console.log("No such document!");
       }
@@ -350,33 +203,12 @@
     });
   }
 
-  function getCartData() {
-    $("#badge").attr('badge', '');
-
-    document.getElementById('cart_show').innerHTML = "";
-    var numdel = 0;
-    dataTocart.forEach(function (data) {
-      var allProductRef = db.collection("PRODUCTS").where("pid", "==", data);
-      allProductRef.get().then(function (querySnapshot) {
-        var item = $('#cart_template').html();
-        var html = ejs.render(item, { list_item: querySnapshot.docs, numDel: numdel })
-        $('#cart_show').append(html);
-        numdel = numdel + 1;
-      });
-
-    })
-    if (dataTocart[0] != null) {
-      $("#non_show").html("");
-    } else {
-      $("#non_show").html("ยังไม่มีสินค้าในตะกร้า");
-    }
-  }
   function ShowFromType(type) {
     localStorage.setItem("type", type);
     document.getElementById("tabbar").setActiveTab(1);
   }
   function DetailProduct(id) {
-    var allProductRef = db.collection("PRODUCTS").where("pid", "==", id);
+    var allProductRef = db.collection("person").where("pid", "==", id);
     allProductRef.get().then(function (querySnapshot) {
       var item = $('#getDetail').html();
       var html = ejs.render(item, { list_item: querySnapshot.docs })
@@ -385,43 +217,9 @@
     myNavigator.pushPage('tab4.html');
     localStorage.clear("code");
   }
-  function getStart() {
-    var allProductRef = db.collection("PRODUCTS");
-    allProductRef.get().then(function (querySnapshot) {
-      querySnapshot.docs.forEach(function (item) {
-        data.push(item)
-      });
-    })
-  }
-  function getSearch(search) {
-    localStorage.setItem("search", "true")
-    const filterItems = (needle, heystack) => {
-      let query = needle.toLowerCase();
-      return heystack.filter(item => item.data().title.toLowerCase().indexOf(needle) >= 0);
-    }
-    var print = filterItems(search, data);
-    sendSearch(print);
-  }
-  function sendSearch(print) {
-    var item = $('#item_template').html();
-    var html = ejs.render(item, { list_item: print })
-    $('#item_show').html(html);
-    var print = null;
-    document.getElementById("tabbar").setActiveTab(1);
-  }
-  function addtocart(data) {
-    dataTocart.push(data);
 
-    $("#badge").attr('badge', dataTocart.length);
-
-  }
-  function getDelete(i) {
-    var remove = dataTocart.splice(i, 1)
-
-    getCartData();
-  }
-  function showToast(id) {
-    ons.notification.toast('เพิ่มสินค้าหมายเลขที่: ' + id + ' เรียบร้อย', {
+  function showToast() {
+    ons.notification.toast('เรียบร้อย', {
       timeout: 500
     });
   };
@@ -431,6 +229,57 @@
     window.location.href = 'scan.html'
 
   }
+  
+  function SaveTimein(pid,brand,carcode,color,type,name,lastname,faculty,major,psucode,phone,photo) {
+    db.collection("TimeIn").add({
+      Timein: firebase.firestore.FieldValue.serverTimestamp(),
+      pid: pid,
+      brand: brand,
+      carcode:carcode,
+      color:color,
+      faculty:faculty,
+      lastname:lastname,
+      major:major,
+      name:name,
+      phone:phone,
+      photo:photo,
+      psucode:psucode,
+      type:type
+    })
+      .then(function (docRef) {
+        console.log("Document written with ID: ", docRef.id);
+      })
+      .catch(function (error) {
+        console.error("Error adding document: ", error);
+      });
+  }
+
+
+   function SaveTimeOut(pid,brand,carcode,color,type,name,lastname,faculty,major,psucode,phone,photo) {
+    db.collection("TimeOut").add({
+      Timein: firebase.firestore.FieldValue.serverTimestamp(),
+      pid: pid,
+      brand: brand,
+      carcode:carcode,
+      color:color,
+      faculty:faculty,
+      lastname:lastname,
+      major:major,
+      name:name,
+      phone:phone,
+      photo:photo,
+      psucode:psucode,
+      type:type
+    })
+      .then(function (docRef) {
+        console.log("Document written with ID: ", docRef.id);
+      })
+      .catch(function (error) {
+        console.error("Error adding document: ", error);
+      });
+  }
+
+
 </script>
 
 
