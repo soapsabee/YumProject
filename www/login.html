@@ -24,12 +24,19 @@
         firebase.initializeApp(config);
 
     </script>
+    <style>
+        
+            .page, .page__background, .page__content {
+          background-color: #FF7A1F;
+          position: absolute;
+      }
+    
+             </style>
 </head>
 
-<body>
-
-
-    <ons-page>
+<body  >
+        
+    <ons-page >
         <ons-toolbar>
             <div class="center" id="appname">#</div>
 
@@ -45,17 +52,24 @@
             </div>
         </ons-toolbar>
     </ons-page>
-
+    
     <ons-page>
+           
         <div style="text-align: center; margin-top: 30px;">
+             <p><img src="https://firebasestorage.googleapis.com/v0/b/psuproject-e92e0.appspot.com/o/img%2Flogo.png?alt=media&token=5480fa2b-35e7-4d90-b14e-8959015d1e25" alt="logo" style="width:auto;"></p>
+                     <br><br>
+                     <p>กรุณากรอกชื่อผู้ใช้</p>
+
             <p>
-                <ons-input id="username" modifier="underbar" placeholder="Username" float></ons-input>
+                <input id="username"  size="20" modifier="underbar"  placeholder="ชื่อผู้ใช้" float> 
             </p>
+           
+            <p>กรุณากรอกรหัสผ่าน</p>
             <p>
-                <ons-input id="password" modifier="underbar" type="password" placeholder="Password" float></ons-input>
+                <input id="password"  size="20" modifier="underbar" type="password" placeholder="รหัสผ่าน" float>
             </p>
             <p style="margin-top: 30px;">
-                <ons-button onclick="login()">Sign in</ons-button>
+                <ons-button onclick="login()" style=" margin: 10px;background-color:#143c6d;">ลงชื่อเข้าใช้</ons-button>
             </p>
 
 

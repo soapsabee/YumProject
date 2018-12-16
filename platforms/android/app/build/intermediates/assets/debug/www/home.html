@@ -39,33 +39,56 @@
       timestampsInSnapshots: true
     });
   </script>
+   <style>
+        
+      .page, .page__background, .page__content {
+    background-color: #143C6D;
+    position: absolute;
+}
+.scan{
+  margin-top: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:auto;
+  height:300px;
+}
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text
+}
+
+       </style>
+  
 </head>
 
 <body>
   <ons-navigator title="Navigator" var="myNavigator" id="myNavigator" page="tab1.html">
     <ons-page>
-      <ons-toolbar>
-        <div class="center" id="appname">#</div>
+        <ons-toolbar style="background-color:#FF7A1F;" >
+      <div class="center" id="appname"><b>PSU Security</b></div>
 
         <div class="left">
           <ons-toolbar-button>
-            <i style="color: tomato; font-size: 20px;" class="zmdi zmdi-shopping-basket"></i>
+            <i style="color:#143c6d; font-size: 20px;" class="fas fa-cog"></i>
           </ons-toolbar-button>
         </div>
         <div class="right">
           <ons-toolbar-button>
-
-            <i style="color: tomato;" label="Cart" class="fas fa-qrcode" onclick="scanQR();"></i>
-          </ons-toolbar-button>
-          <ons-toolbar-button>
-            <i style="color: tomato; font-size: 20px;" class="fas fa-sign-out-alt" onclick="window.location.href = 'logout.html'"></i>
+            <i style="color: #143c6d; font-size: 20px;" class="fas fa-sign-out-alt" onclick="window.location.href = 'logout.html'"></i>
 
           </ons-toolbar-button>
         </div>
       </ons-toolbar>
 
       <ons-tabbar swipeable position="auto" id="tabbar">
-        <ons-tab page="tab1.html" label="Home" icon="ion-home, material:md-home" active>
+        <ons-tab page="tab1.html" icon="ion-home, material:md-home" active style="background-color:white;">
+          <!-- <div class="center" id="appname">PSU Security</div> -->
+        </ons-tab>
+        <ons-tab onclick="scanQR();" icon="ion-camera, material:md-camera" style="background-color:white;">
+          <!-- <div class="center" id="appname">PSU Security</div> -->
         </ons-tab>
       </ons-tabbar>
 
@@ -76,11 +99,11 @@
     <ons-page id="Tab1">
 
 
-      <p style="text-align: center; margin-top: 10px;">
+      <!-- <p style="text-align: center; margin-top: 10px;">
         <ons-search-input placeholder="Search" id="searchbox" onchange="getSearch(this.value)"></ons-search-input>
-      </p>
+      </p> -->
 
-
+<p><img src="https://firebasestorage.googleapis.com/v0/b/psuproject-e92e0.appspot.com/o/img%2Fscan.png?alt=media&token=a4753e8b-e03d-48aa-9c7d-fb3c415bff37" alt="logo" onclick="scanQR();" class ="scan"></p>
 
       <div>
 
@@ -105,7 +128,7 @@
 
 
 
-  <template id="tab4.html" style="background-color: tomato;">
+  <template id="tab4.html" style="background-color:#143C6D;">
 
     <ons-page id="Detail">
       <ons-toolbar>
@@ -141,19 +164,24 @@
           </div> 
           </ons-card>         
           <footer class="fixed-bottom" style=" position: fixed;height: 70px;bottom: 0;width: 100%; background-color: white">
-          
+              <ons-row>
+                <ons-col>
+             <ons-button  modifier="large"  style="background-color:green ; width: 100%; " >
+              <p style="color:white; text-align: center;">ส่งข้อความแจ้งเตือน</p>
+            </ons-button>
+          </ons-col>
+        </ons-row> 
             <ons-row>
               <ons-col>
-              <ons-button style="background-color: tomato; width: 100%; " onclick="SaveTimein('<%= item.pid %>','<%= item.brand %>','<%= item.carcode %>','<%= item.color %>','<%= item.type %>','<%= item.name %>','<%= item.lastname %>','<%= item.faculty %>','<%= item.major %>','<%= item.psucode%>','<%= item.phone%>','<%= item.photo%>'),showToast();">
+              <ons-button style="background-color: tomato; width: 100%;margin-top:30px; " onclick="SaveTimein('<%= item.pid %>','<%= item.brand %>','<%= item.carcode %>','<%= item.color %>','<%= item.type %>','<%= item.name %>','<%= item.lastname %>','<%= item.faculty %>','<%= item.major %>','<%= item.psucode%>','<%= item.phone%>','<%= item.photo%>'),showToast();">
                 <p style="color:white; text-align: center;">รถเข้า</p>
               </ons-button>
             </ons-col>
             <ons-col>
-              <ons-button style="background-color: green; width: 100%; " onclick="SaveTimeOut('<%= item.pid %>','<%= item.brand %>','<%= item.carcode %>','<%= item.color %>','<%= item.type %>','<%= item.name %>','<%= item.lastname %>','<%= item.faculty %>','<%= item.major %>','<%= item.psucode%>','<%= item.phone%>','<%= item.photo%>'),showToast();">
+              <ons-button style="background-color:blue; width: 100%; " onclick="SaveTimeOut('<%= item.pid %>','<%= item.brand %>','<%= item.carcode %>','<%= item.color %>','<%= item.type %>','<%= item.name %>','<%= item.lastname %>','<%= item.faculty %>','<%= item.major %>','<%= item.psucode%>','<%= item.phone%>','<%= item.photo%>'),showToast();">
                 <p style="color:white; text-align: center;">รถออก</p>
               </ons-button>
             </ons-col>
-         
           </ons-row> 
           </footer>
         
