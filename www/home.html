@@ -160,6 +160,13 @@
               <ons-list-item>สาขา  : <%= item.major%></ons-list-item>
               <ons-list-item>รหัสนักศึกษา  : <%= item.psucode%></ons-list-item>
               <ons-list-item>เบอร์โทร  : <%= item.phone%></ons-list-item>
+              <ons-row>
+                  <ons-button  modifier="large"  style="background-color:green ; width:100%;margin-buttom:10px;" >
+                      <p style="color:white; text-align: center;">ส่งข้อความแจ้งเตือน</p>
+                    </ons-button>
+                  </ons-col>
+                </ons-row> 
+              
             </ons-list>
           </div> 
           </ons-card>         
@@ -167,7 +174,7 @@
         
             <ons-row>
               <ons-col>
-              <ons-button style="background-color: tomato; width: 100%;margin-top:30px; " onclick="SaveTimein('<%= item.pid %>','<%= item.brand %>','<%= item.carcode %>','<%= item.color %>','<%= item.type %>','<%= item.name %>','<%= item.lastname %>','<%= item.faculty %>','<%= item.major %>','<%= item.psucode%>','<%= item.phone%>','<%= item.photo%>'),showToast();">
+              <ons-button style="background-color: tomato; width: 100%; " onclick="SaveTimein('<%= item.pid %>','<%= item.brand %>','<%= item.carcode %>','<%= item.color %>','<%= item.type %>','<%= item.name %>','<%= item.lastname %>','<%= item.faculty %>','<%= item.major %>','<%= item.psucode%>','<%= item.phone%>','<%= item.photo%>'),showToast();">
                 <p style="color:white; text-align: center;">รถเข้า</p>
               </ons-button>
             </ons-col>
@@ -178,10 +185,12 @@
             </ons-col>
           </ons-row> 
           </footer>
+         
+              <ons-col>
         
             <%});%>     
       </script>
-
+  
     </ons-page>
 
 

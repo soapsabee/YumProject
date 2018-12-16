@@ -150,21 +150,27 @@
          
             <img src="<%= item.photo%>" style="width: 100%">
             <ons-list>
-              <ons-list-item>รุ่น <%= item.brand %></ons-list-item>
-              <ons-list-item>ทะเบียน <%= item.carcode%></ons-list-item>
-              <ons-list-item>สี <%= item.color%></ons-list-item>
-              <ons-list-item>ประเภท <%= item.type%></ons-list-item>
-              <ons-list-item>ชื่อเจ้าของ <%= item.name%></ons-list-item>
-              <ons-list-item>นามสกุล <%= item.lastname%></ons-list-item>
-              <ons-list-item>คณะ <%= item.faculty%></ons-list-item>
-              <ons-list-item>สาขา <%= item.major%></ons-list-item>
-              <ons-list-item>รหัสนักศึกษา <%= item.psucode%></ons-list-item>
-              <ons-list-item>เบอร์โทร <%= item.phone%></ons-list-item>
+              <ons-list-item>รุ่น  : <%= item.brand %></ons-list-item>
+              <ons-list-item>ทะเบียน  : <%= item.carcode%></ons-list-item>
+              <ons-list-item>สี  :<%= item.color%></ons-list-item>
+              <ons-list-item>ประเภท  : <%= item.type%></ons-list-item>
+              <ons-list-item>ชื่อเจ้าของ  :<%= item.name%></ons-list-item>
+              <ons-list-item>นามสกุล  : <%= item.lastname%></ons-list-item>
+              <ons-list-item>คณะ  : <%= item.faculty%></ons-list-item>
+              <ons-list-item>สาขา  : <%= item.major%></ons-list-item>
+              <ons-list-item>รหัสนักศึกษา  : <%= item.psucode%></ons-list-item>
+              <ons-list-item>เบอร์โทร  : <%= item.phone%></ons-list-item>
+              <ons-row>
+                  <ons-button  modifier="large"  style="background-color:green ; width: 100%; margin-button:30px;  " >
+                      <p style="color:white; text-align: center;">ส่งข้อความแจ้งเตือน</p>
+                    </ons-button>
+                  </ons-col>
+                </ons-row> 
             </ons-list>
           </div> 
           </ons-card>         
           <footer class="fixed-bottom" style=" position: fixed;height: 70px;bottom: 0;width: 100%; background-color: white">
-          
+        
             <ons-row>
               <ons-col>
               <ons-button style="background-color: tomato; width: 100%; " onclick="SaveTimein('<%= item.pid %>','<%= item.brand %>','<%= item.carcode %>','<%= item.color %>','<%= item.type %>','<%= item.name %>','<%= item.lastname %>','<%= item.faculty %>','<%= item.major %>','<%= item.psucode%>','<%= item.phone%>','<%= item.photo%>'),showToast();">
@@ -172,17 +178,18 @@
               </ons-button>
             </ons-col>
             <ons-col>
-              <ons-button style="background-color: green; width: 100%; " onclick="SaveTimeOut('<%= item.pid %>','<%= item.brand %>','<%= item.carcode %>','<%= item.color %>','<%= item.type %>','<%= item.name %>','<%= item.lastname %>','<%= item.faculty %>','<%= item.major %>','<%= item.psucode%>','<%= item.phone%>','<%= item.photo%>'),showToast();">
+              <ons-button style="background-color:blue; width: 100%; " onclick="SaveTimeOut('<%= item.pid %>','<%= item.brand %>','<%= item.carcode %>','<%= item.color %>','<%= item.type %>','<%= item.name %>','<%= item.lastname %>','<%= item.faculty %>','<%= item.major %>','<%= item.psucode%>','<%= item.phone%>','<%= item.photo%>'),showToast();">
                 <p style="color:white; text-align: center;">รถออก</p>
               </ons-button>
             </ons-col>
-         
           </ons-row> 
           </footer>
+         
+              <ons-col>
         
             <%});%>     
       </script>
-
+  
     </ons-page>
 
 
