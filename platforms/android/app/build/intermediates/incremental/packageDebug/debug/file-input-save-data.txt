@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Dec 18 02:00:36 ICT 2018
+#Tue Dec 18 03:20:14 ICT 2018
 210.set=ANDROID_RESOURCE
 282.file=D\:\\Soapsabee\\CordovaShopee\\platforms\\android\\app\\build\\intermediates\\res\\debug\\resources-debug.ap_\\res\\drawable-xhdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png
 14.set=ANDROID_RESOURCE
