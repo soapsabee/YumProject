@@ -16,13 +16,14 @@
 </head>
 
 <body>
+    
         <ons-toolbar style="background-color:#FF7A1F;" >
                 <div class="left">
                   <!-- <ons-icon class="toolbaricon">
                         <i style="font-size: 50px; color:white;" class="fas fa-arrow-left" onclick="hideScanner();"></i>
                   </ons-icon> -->
                 </div>
-                <div class="center" id="appname">ตัวอ่านคิวอาร์โค้ด</div>
+                <div class="center" id="appname">สแกนคิวอาร์โค้ด</div>
                 
               </ons-toolbar>
     <div style="position: relative;display: inline-block;margin-top:50% ;margin-left:6%  ">
@@ -46,16 +47,16 @@
 
 
         function onDeviceReady() {
-
+            
             QRScanner.scan(displayContents);
-
-
+            navigator.geolocation.getCurrentPosition(onSuccess,onError);
+              
             function displayContents(err, text) {
                 if (err) {
                     // an error occurred, or the scan was canceled (error code `6`)
                 } else {
                     // The scan completed, display the contents of the QR code:
-                    localStorage.setItem("code", text);
+                    localStorage.setItem("code", text); 
                     disableLight();
                     hideScanner();
                 }
@@ -102,6 +103,25 @@
 
             window.location.href = 'home.html'
         }
+
+    var onSuccess = function(position) {
+
+         localStorage.setItem("latitude", position.coords.latitude);
+         localStorage.setItem("longitude", position.coords.longitude);
+        
+
+            ons.notification.toast('latitude'+latitude+'logitude'+longitude, {
+                 timeout: 500
+            });
+         
+       
+    }
+
+        function onError(error) {
+           ons.notification.toast('Latitude not found', {
+             timeout: 500
+            });
+    }
 
     </script>
 

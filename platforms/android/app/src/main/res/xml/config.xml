@@ -23,12 +23,21 @@
         <param name="android-package" value="com.nordnetab.cordova.ul.UniversalLinksPlugin" />
         <param name="onload" value="true" />
     </feature>
-    <name>Shopee055</name>
+    <feature name="Geolocation">
+        <param name="android-package" value="org.apache.cordova.geolocation.Geolocation" />
+    </feature>
+    <name>PSUSecurity</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+       Application for PSU PHUKET Security
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="s5930213055@phuket.psu.ac.th">
+        TEAM PSU PHUKET SE59
+        Mrs.Nattida  Noo-Boon  5930213010,
+        Mrs.Nisarat  Saelim    5930213021,
+        Mrs.Waritsara Bambuttook 5930213022,
+        Mrs.Radtanaporn  Choeikan  5930213024,
+        Mr.Arunpong Somlok    5930213026,
+        Mr.Patiphan Wibunchat 5930213055
     </author>
     <content src="index.html" />
     <access origin="*" />

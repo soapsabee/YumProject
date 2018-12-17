@@ -1,0 +1,19 @@
+{
+  "name": "947-341-quiz1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ejs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soapsabee/947-341-Quiz1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soapsabee/947-341-Quiz1/issues"
+  },
+  "homepage": "https://github.com/soapsabee/947-341-Quiz1#readme"
+}

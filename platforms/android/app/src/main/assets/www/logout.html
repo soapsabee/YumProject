@@ -17,8 +17,8 @@
     <script>
         // Initialize Firebase
         var config = {
-            apiKey: "AIzaSyD2PflQpsiu2yNB0kAAaPZ1t7OL_f86HeE",
-            authDomain: "shopee-2428c.firebaseapp.com",
+            apiKey: "AIzaSyAJIRibfhC67xSdhSJNEgSjah7b1qsEG28",
+            authDomain: "psuproject-e92e0.firebaseapp.com",
         };
         firebase.initializeApp(config);
 
@@ -38,31 +38,22 @@
 
 
     <ons-page>
-        <ons-toolbar>
-            <div class="center" id="appname">ออกจากระบบ</div>
+            <ons-navigator title="Navigator" var="myNavigator" id="myNavigator" page="tab1.html">
+                    <ons-page>
+                        <ons-toolbar style="background-color:#143c6d;" ></ons-toolbar-button>b
+                    
+                      </ons-toolbar>
 
-            <div class="left">
-                <ons-toolbar-button>
-                    <i style="color: tomato; font-size: 20px;" class="zmdi zmdi-shopping-basket" onclick="backhome()"></i>
-                </ons-toolbar-button>
-            </div>
-            <div class="right">
-                <ons-toolbar-button>
-                    <i style="color: tomato; font-size: 20px;" class="zmdi zmdi-pin-help"></i>
-                </ons-toolbar-button>
-            </div>
-        </ons-toolbar>
-
-        <div class="center" style="text-align: center; margin-top:30%; ">
+        <div class="center" style="text-align: center; margin-top:30px; ">
               
                 <p><img src="https://firebasestorage.googleapis.com/v0/b/psuproject-e92e0.appspot.com/o/img%2Flogo.png?alt=media&token=5480fa2b-35e7-4d90-b14e-8959015d1e25" alt="logo" style="width:auto;"></p>
                 <br>
          <b>  ท่านต้องการออกจากระบบหรือไม่ ?</b>  <br>
  
             <!-- <button   onclick="logout()"class="button--large--cta" style="width: 95%; margin: 10px;background-color:red;">Sign Out</button> -->
-            <ons-button onclick="window.location.href = 'home.html'"style="margin: 10px ;background-color:green;">Back Home</ons-button>
+            <ons-button onclick="window.location.href = 'home.html'"style="margin: 10px ;background-color:green;">กลับไปสู่หน้าหลัก</ons-button>
             
-            <ons-button onclick="logout()"style="margin: 10px ;background-color:red;">Sign Out</ons-button>
+            <ons-button onclick="logout()"style="margin: 10px ;background-color:red;">ออกจากระบบ</ons-button>
 
   
 
@@ -71,19 +62,19 @@
         <script>
 
             function logout() {
+                
                 firebase.auth().signOut().then(function () {
-                    ons.notification.alert('see you agian' + { timeout: 1000 });
-                    window.location.href = 'login.html';
+                  
+                    ons.notification.alert('see you agian' + { timeout: 10000 });
+                    window.location.href="login.html";
                 }).catch(function (error) {
-                    // An error happened.
+                    console.log(error);
                    
                 });
-            }
+            
+         }
 
-            function backhome() {
-                window.location.href = 'index.html';
-            }
-
+        
         </script>
 
 

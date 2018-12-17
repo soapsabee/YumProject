@@ -19,7 +19,7 @@
   <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-firestore.js"></script>
   <script src="cordova.js"></script>
-
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script>
     // Initialize Firebase
     var config = {
@@ -77,7 +77,7 @@
         </div>
         <div class="right">
           <ons-toolbar-button>
-            <i style="color: #143c6d; font-size: 20px;" class="fas fa-sign-out-alt" onclick="window.location.href = 'logout.html'"></i>
+            <i style="color: #143c6d; font-size: 20px;" class="fas fa-power-off" onclick="window.location.href = 'logout.html'"></i>
 
           </ons-toolbar-button>
         </div>
@@ -91,7 +91,7 @@
           <!-- <div class="center" id="appname">PSU Security</div> -->
         </ons-tab>
       </ons-tabbar>
-
+     
     </ons-page>
   </ons-navigator>
   <template id="tab1.html">
@@ -108,8 +108,7 @@
       <div>
 
         <ons-row class="category" style="margin-top:20px; ">
-
-          <ons-col style="background: white; height: auto; " width="33%" modifier="nodivider" onclick="ShowFromType('<%= category.name %>')">
+          <ons-col style="background: white; height: auto; " width="33%" modifier="nodivider">
             <div class="category_wrapper">
 
 
@@ -118,24 +117,21 @@
 
       </div>
 
-     
 
     </ons-page>
   </template>
 
 
 
-
-
-
   <template id="tab4.html" style="background-color:#143C6D;">
 
+    
     <ons-page id="Detail">
       <ons-toolbar>
         <div class="left">
           <ons-back-button>Back</ons-back-button>
         </div>
-        <div class="center">ข้อมูลยานพาหนะ</div>
+        <div class="center">ข้อมูลเจ้าของรถ</div>
 
       </ons-toolbar>
 
@@ -149,6 +145,12 @@
           <div class="content">
          
             <img src="<%= item.photo%>" style="width: 100%">
+            <ons-row>
+              <ons-button  modifier="large"  style="background-color:green ; width:100%;margin-buttom:10px;" onclick="createAlertDialog()">
+                  <i class="fab fa-line" style="color:white; text-align: center;font-size:20px;">ส่งข้อความแจ้งเตือน</i>
+                </ons-button>
+              </ons-col>
+            </ons-row>
             <ons-list>
               <ons-list-item>รุ่น  : <%= item.brand %></ons-list-item>
               <ons-list-item>ทะเบียน  : <%= item.carcode%></ons-list-item>
@@ -160,12 +162,7 @@
               <ons-list-item>สาขา  : <%= item.major%></ons-list-item>
               <ons-list-item>รหัสนักศึกษา  : <%= item.psucode%></ons-list-item>
               <ons-list-item>เบอร์โทร  : <%= item.phone%></ons-list-item>
-              <ons-row>
-                  <ons-button  modifier="large"  style="background-color:green ; width: 200%;margin-buttom:20px;" >
-                      <p style="color:white; text-align: center;">ส่งข้อความแจ้งเตือน</p>
-                    </ons-button>
-                  </ons-col>
-                </ons-row> 
+             
               
             </ons-list>
           </div> 
@@ -174,12 +171,12 @@
         
             <ons-row>
               <ons-col>
-              <ons-button style="background-color: tomato; width: 100%; " onclick="SaveTimein('<%= item.pid %>','<%= item.brand %>','<%= item.carcode %>','<%= item.color %>','<%= item.type %>','<%= item.name %>','<%= item.lastname %>','<%= item.faculty %>','<%= item.major %>','<%= item.psucode%>','<%= item.phone%>','<%= item.photo%>'),showToast();">
+              <ons-button style="background-color: #1874CD ; width: 100%; " onclick="SaveTimein('<%= item.pid %>','<%= item.brand %>','<%= item.carcode %>','<%= item.color %>','<%= item.type %>','<%= item.name %>','<%= item.lastname %>','<%= item.faculty %>','<%= item.major %>','<%= item.psucode%>','<%= item.phone%>','<%= item.photo%>'),showToast();">
                 <p style="color:white; text-align: center;">รถเข้า</p>
               </ons-button>
             </ons-col>
             <ons-col>
-              <ons-button style="background-color:blue; width: 100%; " onclick="SaveTimeOut('<%= item.pid %>','<%= item.brand %>','<%= item.carcode %>','<%= item.color %>','<%= item.type %>','<%= item.name %>','<%= item.lastname %>','<%= item.faculty %>','<%= item.major %>','<%= item.psucode%>','<%= item.phone%>','<%= item.photo%>'),showToast();">
+              <ons-button style="background-color:tomato; width: 100%; " onclick="SaveTimeOut('<%= item.pid %>','<%= item.brand %>','<%= item.carcode %>','<%= item.color %>','<%= item.type %>','<%= item.name %>','<%= item.lastname %>','<%= item.faculty %>','<%= item.major %>','<%= item.psucode%>','<%= item.phone%>','<%= item.photo%>'),showToast();">
                 <p style="color:white; text-align: center;">รถออก</p>
               </ons-button>
             </ons-col>
@@ -188,6 +185,20 @@
          
               <ons-col>
         
+
+                  <template id="alert-dialog.html">
+                      <ons-alert-dialog id="my-alert-dialog" modifier="rowfooter">
+                        <div class="alert-dialog-title">ยืนยัน</div>
+                        <div class="alert-dialog-content">
+                          คุณต้องการที่จะส่งข้อความหรือไม่ ?
+                        </div>
+                        <div class="alert-dialog-footer">
+                          <ons-alert-dialog-button onclick="hideAlertDialog()">ยกเลิก</ons-alert-dialog-button>
+                          <ons-alert-dialog-button onclick="lineNotification('<%= item.pid %>'),hideAlertDialog()">ตกลง</ons-alert-dialog-button>
+                        </div>
+                      </ons-alert-dialog>
+                    </template>
+
             <%});%>     
       </script>
   
@@ -195,15 +206,22 @@
 
 
   </template>
+
+  
+
+
 </body>
 <script>
+
+  var latitude = localStorage.getItem("latitude");
+  var longitude = localStorage.getItem("longitude");
   var code = localStorage.getItem("code");
   if (code != null) {
-    DetailProduct(parseInt(code));
+    DetailPerson(parseInt(code));
   }
 
-  getHomeData();
 
+ 
   document.addEventListener('prechange', function (event) {
     var type = localStorage.getItem("type")
     var search = localStorage.getItem("search")
@@ -214,31 +232,8 @@
     }
 
   });
-
-  function getHomeData() {
-    var docRef = db.collection("shopee").doc("home");
-
-    docRef.get().then(function (doc) {
-      if (doc.exists) {
-        console.log("Document data:", doc.data());
-        var data = doc.data();
-        console.log("test", data.appname);
-        $('#appname').html(data.appname);
-
-
-      } else {
-        console.log("No such document!");
-      }
-    }).catch(function (error) {
-      console.log("Error getting document:", error);
-    });
-  }
-
-  function ShowFromType(type) {
-    localStorage.setItem("type", type);
-    document.getElementById("tabbar").setActiveTab(1);
-  }
-  function DetailProduct(id) {
+  
+  function DetailPerson(id) {
     var allProductRef = db.collection("person").where("pid", "==", id);
     allProductRef.get().then(function (querySnapshot) {
       var item = $('#getDetail').html();
@@ -251,7 +246,7 @@
 
   function showToast() {
     ons.notification.toast('เรียบร้อย', {
-      timeout: 500
+      timeout: 1000
     });
   };
 
@@ -310,6 +305,42 @@
       });
   }
 
+  function lineNotification(id){
+    console.log("Line:"+id)
+    axios.get(`https://dry-inlet-85924.herokuapp.com/api/alertNotificaiton/${id}/${latitude}/${longitude}`, {
+
+    })
+    .then(function (response) {
+    console.log(response);
+    
+    
+    })
+    .catch(function (error) {
+      console.log(error)
+    });
+    
+    showToast();
+    localStorage.clear();
+  }
+
+var createAlertDialog = function() {
+  var dialog = document.getElementById('my-alert-dialog');
+
+  if (dialog) {
+    dialog.show();
+  } else {
+    ons.createElement('alert-dialog.html', { append: true })
+      .then(function(dialog) {
+        dialog.show();
+      });
+  }
+};
+
+  var hideAlertDialog = function() {
+    document
+    .getElementById('my-alert-dialog')
+    .hide();
+  };
 
 </script>
 

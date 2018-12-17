@@ -1,17 +1,17 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml:2:1-41:12
+ADDED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml:2:1-44:12
 MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\STD\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.3.0.aar\7a03d96067d47763b3dcf4c635da3559\AndroidManifest.xml:17:1-55:12
 MERGED from [com.android.support:appcompat-v7:23.1.0] C:\Users\STD\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.1.0.aar\ac88f05d4ae875f3d66528897de556d7\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:customtabs:23.3.0] C:\Users\STD\.gradle\caches\transforms-1\files-1.1\customtabs-23.3.0.aar\cc8178729ab0a59413d08e130ad33e54\AndroidManifest.xml:17:1-24:12
 MERGED from [:CordovaLib] D:\Soapsabee\CordovaShopee\platforms\android\CordovaLib\build\intermediates\manifests\full\debug\AndroidManifest.xml:20:1-27:12
 MERGED from [com.android.support:support-v4:23.3.0] C:\Users\STD\.gradle\caches\transforms-1\files-1.1\support-v4-23.3.0.aar\f63b538fbf2101d42e0d98cb1e1a3229\AndroidManifest.xml:17:1-24:12
-INJECTED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml:2:1-44:12
 	package
 		ADDED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml:2:102-131
 		INJECTED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml
@@ -160,6 +160,18 @@ MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\STD\.gradle\
 		ADDED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml:40:64-88
 	android:name
 		ADDED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml:40:19-63
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml:41:5-81
+	android:name
+		ADDED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml:41:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml:42:5-79
+	android:name
+		ADDED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml:42:22-76
+uses-feature#android.hardware.location.gps
+ADDED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml:43:5-66
+	android:name
+		ADDED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml:43:19-63
 uses-feature#android.hardware.camera.autofocus
 ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\STD\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.3.0.aar\7a03d96067d47763b3dcf4c635da3559\AndroidManifest.xml:32:5-34:36
 	android:required

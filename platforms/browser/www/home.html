@@ -19,7 +19,7 @@
   <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-firestore.js"></script>
   <script src="cordova.js"></script>
-
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script>
     // Initialize Firebase
     var config = {
@@ -77,7 +77,7 @@
         </div>
         <div class="right">
           <ons-toolbar-button>
-            <i style="color: #143c6d; font-size: 20px;" class="fas fa-sign-out-alt" onclick="window.location.href = 'logout.html'"></i>
+            <i style="color: #143c6d; font-size: 20px;" class="fas fa-power-off" onclick="window.location.href = 'logout.html'"></i>
 
           </ons-toolbar-button>
         </div>
@@ -91,7 +91,7 @@
           <!-- <div class="center" id="appname">PSU Security</div> -->
         </ons-tab>
       </ons-tabbar>
-
+     
     </ons-page>
   </ons-navigator>
   <template id="tab1.html">
@@ -108,8 +108,7 @@
       <div>
 
         <ons-row class="category" style="margin-top:20px; ">
-
-          <ons-col style="background: white; height: auto; " width="33%" modifier="nodivider" onclick="ShowFromType('<%= category.name %>')">
+          <ons-col style="background: white; height: auto; " width="33%" modifier="nodivider">
             <div class="category_wrapper">
 
 
@@ -118,13 +117,9 @@
 
       </div>
 
-     
 
     </ons-page>
   </template>
-
-
-
 
 
 
@@ -149,6 +144,12 @@
           <div class="content">
          
             <img src="<%= item.photo%>" style="width: 100%">
+            <ons-row>
+              <ons-button  modifier="large"  style="background-color:green ; width:100%;margin-buttom:10px;" onclick="lineNotification('<%= item.pid %>');">
+                  <i class="fab fa-line" style="color:white; text-align: center;font-size:20px;">ส่งข้อความแจ้งเตือน</i>
+                </ons-button>
+              </ons-col>
+            </ons-row>
             <ons-list>
               <ons-list-item>รุ่น  : <%= item.brand %></ons-list-item>
               <ons-list-item>ทะเบียน  : <%= item.carcode%></ons-list-item>
@@ -160,12 +161,8 @@
               <ons-list-item>สาขา  : <%= item.major%></ons-list-item>
               <ons-list-item>รหัสนักศึกษา  : <%= item.psucode%></ons-list-item>
               <ons-list-item>เบอร์โทร  : <%= item.phone%></ons-list-item>
-              <ons-row>
-                  <ons-button  modifier="large"  style="background-color:green ; width: 100%; margin-button:30px;  " >
-                      <p style="color:white; text-align: center;">ส่งข้อความแจ้งเตือน</p>
-                    </ons-button>
-                  </ons-col>
-                </ons-row> 
+             
+              
             </ons-list>
           </div> 
           </ons-card>         
@@ -173,12 +170,12 @@
         
             <ons-row>
               <ons-col>
-              <ons-button style="background-color: tomato; width: 100%; " onclick="SaveTimein('<%= item.pid %>','<%= item.brand %>','<%= item.carcode %>','<%= item.color %>','<%= item.type %>','<%= item.name %>','<%= item.lastname %>','<%= item.faculty %>','<%= item.major %>','<%= item.psucode%>','<%= item.phone%>','<%= item.photo%>'),showToast();">
+              <ons-button style="background-color: #1874CD ; width: 100%; " onclick="SaveTimein('<%= item.pid %>','<%= item.brand %>','<%= item.carcode %>','<%= item.color %>','<%= item.type %>','<%= item.name %>','<%= item.lastname %>','<%= item.faculty %>','<%= item.major %>','<%= item.psucode%>','<%= item.phone%>','<%= item.photo%>'),showToast();">
                 <p style="color:white; text-align: center;">รถเข้า</p>
               </ons-button>
             </ons-col>
             <ons-col>
-              <ons-button style="background-color:blue; width: 100%; " onclick="SaveTimeOut('<%= item.pid %>','<%= item.brand %>','<%= item.carcode %>','<%= item.color %>','<%= item.type %>','<%= item.name %>','<%= item.lastname %>','<%= item.faculty %>','<%= item.major %>','<%= item.psucode%>','<%= item.phone%>','<%= item.photo%>'),showToast();">
+              <ons-button style="background-color:tomato; width: 100%; " onclick="SaveTimeOut('<%= item.pid %>','<%= item.brand %>','<%= item.carcode %>','<%= item.color %>','<%= item.type %>','<%= item.name %>','<%= item.lastname %>','<%= item.faculty %>','<%= item.major %>','<%= item.psucode%>','<%= item.phone%>','<%= item.photo%>'),showToast();">
                 <p style="color:white; text-align: center;">รถออก</p>
               </ons-button>
             </ons-col>
@@ -196,13 +193,16 @@
   </template>
 </body>
 <script>
+
+  var latitude = localStorage.getItem("latitude");
+  var longitude = localStorage.getItem("longitude");
   var code = localStorage.getItem("code");
   if (code != null) {
-    DetailProduct(parseInt(code));
+    DetailPerson(parseInt(code));
   }
 
-  getHomeData();
 
+ 
   document.addEventListener('prechange', function (event) {
     var type = localStorage.getItem("type")
     var search = localStorage.getItem("search")
@@ -213,31 +213,8 @@
     }
 
   });
-
-  function getHomeData() {
-    var docRef = db.collection("shopee").doc("home");
-
-    docRef.get().then(function (doc) {
-      if (doc.exists) {
-        console.log("Document data:", doc.data());
-        var data = doc.data();
-        console.log("test", data.appname);
-        $('#appname').html(data.appname);
-
-
-      } else {
-        console.log("No such document!");
-      }
-    }).catch(function (error) {
-      console.log("Error getting document:", error);
-    });
-  }
-
-  function ShowFromType(type) {
-    localStorage.setItem("type", type);
-    document.getElementById("tabbar").setActiveTab(1);
-  }
-  function DetailProduct(id) {
+  
+  function DetailPerson(id) {
     var allProductRef = db.collection("person").where("pid", "==", id);
     allProductRef.get().then(function (querySnapshot) {
       var item = $('#getDetail').html();
@@ -309,6 +286,24 @@
       });
   }
 
+  function lineNotification(id){
+    ons.notification.confirm('คุณต้องการที่จะส่งข้อความหรือไม่?')
+    console.log("Line:"+id)
+    axios.get(`https://dry-inlet-85924.herokuapp.com/api/alertNotificaiton/${id}/${latitude}/${longitude}`, {
+
+    })
+    .then(function (response) {
+    console.log(response);
+    
+    })
+    .catch(function (error) {
+      console.log(error)
+    });
+
+  }
+  var showConfirm = function() {
+ 
+};
 
 </script>
 

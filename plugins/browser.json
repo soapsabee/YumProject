@@ -28,6 +28,9 @@
     },
     "cordova-universal-links-plugin": {
       "PACKAGE_NAME": "com.patiphan.shopee"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "com.patiphan.shopee"
     }
   },
   "dependent_plugins": {
