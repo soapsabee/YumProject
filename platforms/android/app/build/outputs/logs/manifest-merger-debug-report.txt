@@ -13,7 +13,7 @@ INJECTED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidM
 INJECTED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml:2:1-44:12
 INJECTED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml:2:1-44:12
 	package
-		ADDED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml:2:102-131
+		ADDED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml:2:102-126
 		INJECTED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml
 	android:versionName
@@ -23,7 +23,7 @@ INJECTED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidM
 	android:hardwareAccelerated
 		ADDED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml:2:11-45
 	xmlns:android
-		ADDED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml:2:132-190
+		ADDED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml:2:127-185
 	android:versionCode
 		ADDED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml:2:46-73
 		INJECTED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml
@@ -72,7 +72,7 @@ MERGED from [com.android.support:support-v4:23.3.0] C:\Users\STD\.gradle\caches\
 		ADDED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml:6:18-52
 	android:icon
 		ADDED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml:6:53-80
-activity#com.patiphan.shopee.MainActivity
+activity#com.soap.sabee.MainActivity
 ADDED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml:7:9-36:20
 	android:label
 		ADDED from D:\Soapsabee\CordovaShopee\platforms\android\app\src\main\AndroidManifest.xml:7:97-134

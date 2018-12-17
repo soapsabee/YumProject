@@ -1072,10 +1072,6 @@
         "source": "C:\\Users\\STD\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.0.aar\\ac88f05d4ae875f3d66528897de556d7\\res\\drawable-mdpi\\abc_textfield_search_default_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\Soapsabee\\CordovaShopee\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_icon.png.flat",
-        "source": "D:\\Soapsabee\\CordovaShopee\\platforms\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\icon.png"
-    },
-    {
         "merged": "D:\\Soapsabee\\CordovaShopee\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_abc_btn_rating_star_off_mtrl_alpha.png.flat",
         "source": "C:\\Users\\STD\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.0.aar\\ac88f05d4ae875f3d66528897de556d7\\res\\drawable-xxhdpi\\abc_btn_rating_star_off_mtrl_alpha.png"
     },
@@ -1118,10 +1114,6 @@
     {
         "merged": "D:\\Soapsabee\\CordovaShopee\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_popup_exit.xml.flat",
         "source": "C:\\Users\\STD\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.0.aar\\ac88f05d4ae875f3d66528897de556d7\\res\\anim\\abc_popup_exit.xml"
-    },
-    {
-        "merged": "D:\\Soapsabee\\CordovaShopee\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_icon.png.flat",
-        "source": "D:\\Soapsabee\\CordovaShopee\\platforms\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\icon.png"
     },
     {
         "merged": "D:\\Soapsabee\\CordovaShopee\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_alert_dialog_button_bar_material.xml.flat",
