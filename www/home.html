@@ -151,12 +151,12 @@
           <footer class="fixed-bottom" style=" position: fixed;height: 70px;bottom: 0;width: 100%; background-color: white">
             <ons-row>
               <ons-col>
-              <ons-button style="background-color: #1874CD ; width: 100%; " onclick="SaveTimein('<%= item.pid %>','<%= item.brand %>','<%= item.carcode %>','<%= item.color %>','<%= item.type %>','<%= item.name %>','<%= item.lastname %>','<%= item.faculty %>','<%= item.major %>','<%= item.psucode%>','<%= item.phone%>','<%= item.photo%>'),showToast();">
+              <ons-button style="background-color: #1874CD ; width: 100%; " onclick="SaveTimein('<%= item.pid %>','<%= item.brand %>','<%= item.carcode %>','<%= item.color %>','<%= item.type %>','<%= item.name %>','<%= item.lastname %>','<%= item.faculty %>','<%= item.major %>','<%= item.psucode%>','<%= item.phone%>','<%= item.photo%>')">
                 <p style="color:white; text-align: center;">รถเข้า</p>
               </ons-button>
             </ons-col>
             <ons-col>
-              <ons-button style="background-color:tomato; width: 100%; " onclick="SaveTimeOut('<%= item.pid %>','<%= item.brand %>','<%= item.carcode %>','<%= item.color %>','<%= item.type %>','<%= item.name %>','<%= item.lastname %>','<%= item.faculty %>','<%= item.major %>','<%= item.psucode%>','<%= item.phone%>','<%= item.photo%>'),showToast();">
+              <ons-button style="background-color:tomato; width: 100%; " onclick="SaveTimeOut('<%= item.pid %>','<%= item.brand %>','<%= item.carcode %>','<%= item.color %>','<%= item.type %>','<%= item.name %>','<%= item.lastname %>','<%= item.faculty %>','<%= item.major %>','<%= item.psucode%>','<%= item.phone%>','<%= item.photo%>')">
                 <p style="color:white; text-align: center;">รถออก</p>
               </ons-button>
             </ons-col>
@@ -244,6 +244,7 @@
     })
       .then(function (docRef) {
         console.log("Document written with ID: ", docRef.id);
+        showToast();
       })
       .catch(function (error) {
         console.error("Error adding document: ", error);
@@ -268,6 +269,7 @@
     })
       .then(function (docRef) {
         console.log("Document written with ID: ", docRef.id);
+        showToast();
       })
       .catch(function (error) {
         console.error("Error adding document: ", error);
