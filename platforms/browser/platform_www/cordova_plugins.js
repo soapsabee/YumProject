@@ -57,15 +57,16 @@ module.exports = [
 module.exports.metadata = 
 // TOP OF METADATA
 {
+    "cordova-plugin-add-swift-support": "1.7.2",
     "cordova-plugin-compat": "1.2.0",
     "cordova-plugin-browsertab": "0.2.0",
     "cordova-plugin-buildinfo": "2.0.2",
     "cordova-plugin-customurlscheme": "4.3.0",
+    "cordova-plugin-geolocation": "4.0.1",
     "cordova-plugin-inappbrowser": "3.0.0",
     "cordova-plugin-qrscanner": "2.6.0",
     "cordova-plugin-whitelist": "1.3.3",
-    "cordova-universal-links-plugin": "1.2.1",
-    "cordova-plugin-geolocation": "4.0.1"
+    "cordova-universal-links-plugin": "1.2.1"
 }
 // BOTTOM OF METADATA
 });

@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
     <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
     <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 
@@ -19,45 +20,49 @@
         var config = {
             apiKey: "AIzaSyAJIRibfhC67xSdhSJNEgSjah7b1qsEG28",
             authDomain: "psuproject-e92e0.firebaseapp.com"
-          
         };
         firebase.initializeApp(config);
-
     </script>
+
     <style>
-        
-            .page, .page__background, .page__content {
-          background-color: #FF7A1F;
-          position: absolute;
-      }
-    
-             </style>
+        .page,
+        .page__background,
+        .page__content {
+            background-color: #FF7A1F;
+            position: absolute;
+        }
+
+        #fon {
+            font-family: 'Kanit', sans-serif;
+        }
+
+        .input {
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+            margin: auto;
+        }
+    </style>
+
 </head>
 
-<body  >
-        
-   
+<body>
     <ons-page>
-           
         <div style="text-align: center; margin-top: 30px;">
-             <p><img src="https://firebasestorage.googleapis.com/v0/b/psuproject-e92e0.appspot.com/o/img%2Flogo.png?alt=media&token=5480fa2b-35e7-4d90-b14e-8959015d1e25" alt="logo" style="width:auto;"></p>
-                     <br><br>
-                     <p>กรุณากรอกชื่อผู้ใช้</p>
-
+            <p><img src="https://firebasestorage.googleapis.com/v0/b/psuproject-e92e0.appspot.com/o/img%2Flogo.png?alt=media&token=5480fa2b-35e7-4d90-b14e-8959015d1e25"
+                    alt="logo" style="width:auto;"></p>
+            <br><br>
+            <b id="fon">กรุณากรอกชื่อผู้ใช้</b>
             <p>
-                <input id="username"  size="20" modifier="underbar"  placeholder="ชื่อผู้ใช้" float> 
+                <ons-input class="input" id="username" modifier="underbar" placeholder=" ชื่อผู้ใช้" float>
             </p>
-           
-            <p>กรุณากรอกรหัสผ่าน</p>
+            <b id="fon">กรุณากรอกรหัสผ่าน</b>
             <p>
-                <input id="password"  size="20" modifier="underbar" type="password" placeholder="รหัสผ่าน" float>
+                <ons-input class="input" id="password" modifier="underbar" type="password" placeholder=" รหัสผ่าน" float>
             </p>
             <p style="margin-top: 30px;">
-                <ons-button onclick="login()" style=" margin: 10px;background-color:#143c6d;">ลงชื่อเข้าใช้</ons-button>
+                <ons-button onclick="login()" style=" margin: 10px;background-color:#143c6d;" id="fon">ลงชื่อเข้าใช้</ons-button>
             </p>
-
-
-
         </div>
     </ons-page>
 
@@ -72,25 +77,17 @@
                 var errorMessage = error.message;
                 console.log(error.code + ':' + error.message);
                 ons.notification.alert('Login failed!');
-
                 // ...
             });
-
         };
-
-
 
         firebase.auth().onAuthStateChanged(function (user) {
             if (user) {
-
-            
                 window.location.href = 'home.html';
                 // ...
             }
         });
-
     </script>
-
 
 </body>
 

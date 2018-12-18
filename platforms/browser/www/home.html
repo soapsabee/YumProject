@@ -39,36 +39,38 @@
       timestampsInSnapshots: true
     });
   </script>
-   <style>
-        
-      .page, .page__background, .page__content {
-    background-color: #143C6D;
-    position: absolute;
-}
-.scan{
-  margin-top: 100px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width:auto;
-  height:300px;
-}
-.center{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text
-}
+  <style>
+    .page,
+    .page__background,
+    .page__content {
+      background-color: #143C6D;
+      position: absolute;
+    }
 
-       </style>
-  
+    .scan {
+      margin-top: 100px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: auto;
+      height: 300px;
+    }
+
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      font-family: 'Kanit', sans-serif;
+    }
+  </style>
+
 </head>
 
 <body>
   <ons-navigator title="Navigator" var="myNavigator" id="myNavigator" page="tab1.html">
     <ons-page>
-        <ons-toolbar style="background-color:#FF7A1F;" >
-      <div class="center" id="appname"><b>PSU Security</b></div>
+      <ons-toolbar style="background-color: rgb(255, 122, 31);">
+        <div class="center" id="appname"><b>PSU Security</b></div>
 
         <div class="left">
           <ons-toolbar-button>
@@ -85,67 +87,48 @@
 
       <ons-tabbar swipeable position="auto" id="tabbar">
         <ons-tab page="tab1.html" icon="ion-home, material:md-home" active style="background-color:white;">
-          <!-- <div class="center" id="appname">PSU Security</div> -->
         </ons-tab>
         <ons-tab onclick="scanQR();" icon="ion-camera, material:md-camera" style="background-color:white;">
-          <!-- <div class="center" id="appname">PSU Security</div> -->
         </ons-tab>
       </ons-tabbar>
-     
+
     </ons-page>
   </ons-navigator>
   <template id="tab1.html">
 
     <ons-page id="Tab1">
-
-
-      <!-- <p style="text-align: center; margin-top: 10px;">
-        <ons-search-input placeholder="Search" id="searchbox" onchange="getSearch(this.value)"></ons-search-input>
-      </p> -->
-
-<p><img src="https://firebasestorage.googleapis.com/v0/b/psuproject-e92e0.appspot.com/o/img%2Fscan.png?alt=media&token=a4753e8b-e03d-48aa-9c7d-fb3c415bff37" alt="logo" onclick="scanQR();" class ="scan"></p>
-
+      <p><img src="https://firebasestorage.googleapis.com/v0/b/psuproject-e92e0.appspot.com/o/img%2Fscan.png?alt=media&token=a4753e8b-e03d-48aa-9c7d-fb3c415bff37"
+          alt="logo" onclick="scanQR();" class="scan"></p>
       <div>
-
         <ons-row class="category" style="margin-top:20px; ">
           <ons-col style="background: white; height: auto; " width="33%" modifier="nodivider">
             <div class="category_wrapper">
-
-
             </div>
           </ons-col>
-
       </div>
-
-
     </ons-page>
   </template>
 
 
 
   <template id="tab4.html" style="background-color:#143C6D;">
-
     <ons-page id="Detail">
       <ons-toolbar>
         <div class="left">
           <ons-back-button>Back</ons-back-button>
         </div>
-        <div class="center">ข้อมูลยานพาหนะ</div>
-
+        <div class="center">ข้อมูลเจ้าของรถ</div>
       </ons-toolbar>
 
       <div id="detail_show"></div>
 
-
       <script id="getDetail" type="text/template">
         <ons-card>
-            
         <% list_item.forEach(function(i){ var item = i.data(); %>       
           <div class="content">
-         
             <img src="<%= item.photo%>" style="width: 100%">
             <ons-row>
-              <ons-button  modifier="large"  style="background-color:green ; width:100%;margin-buttom:10px;" onclick="lineNotification('<%= item.pid %>');">
+              <ons-button  modifier="large"  style="background-color:green ; width:100%;margin-buttom:10px;" onclick="createAlertDialog()">
                   <i class="fab fa-line" style="color:white; text-align: center;font-size:20px;">ส่งข้อความแจ้งเตือน</i>
                 </ons-button>
               </ons-col>
@@ -161,13 +144,11 @@
               <ons-list-item>สาขา  : <%= item.major%></ons-list-item>
               <ons-list-item>รหัสนักศึกษา  : <%= item.psucode%></ons-list-item>
               <ons-list-item>เบอร์โทร  : <%= item.phone%></ons-list-item>
-             
-              
             </ons-list>
           </div> 
-          </ons-card>         
+          </ons-card>     
+
           <footer class="fixed-bottom" style=" position: fixed;height: 70px;bottom: 0;width: 100%; background-color: white">
-        
             <ons-row>
               <ons-col>
               <ons-button style="background-color: #1874CD ; width: 100%; " onclick="SaveTimein('<%= item.pid %>','<%= item.brand %>','<%= item.carcode %>','<%= item.color %>','<%= item.type %>','<%= item.name %>','<%= item.lastname %>','<%= item.faculty %>','<%= item.major %>','<%= item.psucode%>','<%= item.phone%>','<%= item.photo%>'),showToast();">
@@ -183,15 +164,28 @@
           </footer>
          
               <ons-col>
-        
+                  <template id="alert-dialog.html">
+                      <ons-alert-dialog id="my-alert-dialog" modifier="rowfooter">
+                        <div class="alert-dialog-title">ยืนยัน</div>
+                        <div class="alert-dialog-content">
+                          คุณต้องการที่จะส่งข้อความหรือไม่ ?
+                        </div>
+                        <div class="alert-dialog-footer">
+                          <ons-alert-dialog-button onclick="hideAlertDialog()">ยกเลิก</ons-alert-dialog-button>
+                          <ons-alert-dialog-button onclick="lineNotification('<%= item.pid %>'),hideAlertDialog()">ตกลง</ons-alert-dialog-button>
+                        </div>
+                      </ons-alert-dialog>
+                    </template>
+                  </ons-col>
             <%});%>     
       </script>
-  
+
     </ons-page>
 
-
   </template>
+
 </body>
+
 <script>
 
   var latitude = localStorage.getItem("latitude");
@@ -201,8 +195,6 @@
     DetailPerson(parseInt(code));
   }
 
-
- 
   document.addEventListener('prechange', function (event) {
     var type = localStorage.getItem("type")
     var search = localStorage.getItem("search")
@@ -211,9 +203,8 @@
       console.log('Home clicked');
       getHomeData();
     }
-
   });
-  
+
   function DetailPerson(id) {
     var allProductRef = db.collection("person").where("pid", "==", id);
     allProductRef.get().then(function (querySnapshot) {
@@ -227,31 +218,29 @@
 
   function showToast() {
     ons.notification.toast('เรียบร้อย', {
-      timeout: 500
+      timeout: 1000
     });
   };
 
   function scanQR() {
-
     window.location.href = 'scan.html'
-
   }
-  
-  function SaveTimein(pid,brand,carcode,color,type,name,lastname,faculty,major,psucode,phone,photo) {
+
+  function SaveTimein(pid, brand, carcode, color, type, name, lastname, faculty, major, psucode, phone, photo) {
     db.collection("TimeIn").add({
       Timein: firebase.firestore.FieldValue.serverTimestamp(),
       pid: pid,
       brand: brand,
-      carcode:carcode,
-      color:color,
-      faculty:faculty,
-      lastname:lastname,
-      major:major,
-      name:name,
-      phone:phone,
-      photo:photo,
-      psucode:psucode,
-      type:type
+      carcode: carcode,
+      color: color,
+      faculty: faculty,
+      lastname: lastname,
+      major: major,
+      name: name,
+      phone: phone,
+      photo: photo,
+      psucode: psucode,
+      type: type
     })
       .then(function (docRef) {
         console.log("Document written with ID: ", docRef.id);
@@ -261,22 +250,21 @@
       });
   }
 
-
-   function SaveTimeOut(pid,brand,carcode,color,type,name,lastname,faculty,major,psucode,phone,photo) {
+  function SaveTimeOut(pid, brand, carcode, color, type, name, lastname, faculty, major, psucode, phone, photo) {
     db.collection("TimeOut").add({
       Timein: firebase.firestore.FieldValue.serverTimestamp(),
       pid: pid,
       brand: brand,
-      carcode:carcode,
-      color:color,
-      faculty:faculty,
-      lastname:lastname,
-      major:major,
-      name:name,
-      phone:phone,
-      photo:photo,
-      psucode:psucode,
-      type:type
+      carcode: carcode,
+      color: color,
+      faculty: faculty,
+      lastname: lastname,
+      major: major,
+      name: name,
+      phone: phone,
+      photo: photo,
+      psucode: psucode,
+      type: type
     })
       .then(function (docRef) {
         console.log("Document written with ID: ", docRef.id);
@@ -286,41 +274,38 @@
       });
   }
 
-  function lineNotification(id){
-    ons.notification.confirm('คุณต้องการที่จะส่งข้อความหรือไม่?')
-    console.log("Line:"+id)
+  function lineNotification(id) {
+    console.log("Line:" + id)
     axios.get(`https://dry-inlet-85924.herokuapp.com/api/alertNotificaiton/${id}/${latitude}/${longitude}`, {
-
     })
-    .then(function (response) {
-    console.log(response);
-    
-    })
-    .catch(function (error) {
-      console.log(error)
-    });
-
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error)
+      });
+    showToast();
+    localStorage.clear();
   }
-  var showConfirm = function() {
- 
-};
+
+  var createAlertDialog = function () {
+    var dialog = document.getElementById('my-alert-dialog');
+    if (dialog) {
+      dialog.show();
+    } else {
+      ons.createElement('alert-dialog.html', { append: true })
+        .then(function (dialog) {
+          dialog.show();
+        });
+    }
+  };
+
+  var hideAlertDialog = function () {
+    document
+      .getElementById('my-alert-dialog')
+      .hide();
+  };
 
 </script>
-
-
-
-
-</html>
-
-
-
-
-
-
-
-
-
-
-
 
 </html>

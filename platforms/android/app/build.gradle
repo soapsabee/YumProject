@@ -91,9 +91,9 @@ ext {
 }
 
 // PLUGIN GRADLE EXTENSIONS START
-apply from: "../cordova-plugin-browsertab/shopee-BrowserTab.gradle"
-apply from: "../cordova-plugin-buildinfo/shopee-BuildInfo.gradle"
-apply from: "../cordova-plugin-qrscanner/shopee-qrscanner.gradle"
+apply from: "../cordova-plugin-browsertab/sabee-BrowserTab.gradle"
+apply from: "../cordova-plugin-buildinfo/sabee-BuildInfo.gradle"
+apply from: "../cordova-plugin-qrscanner/sabee-qrscanner.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras = file('build-extras.gradle').exists()

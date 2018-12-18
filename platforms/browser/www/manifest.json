@@ -1,11 +1,11 @@
 {
   "background_color": "#FFF",
   "display": "standalone",
-  "name": "Shopee055",
-  "short_name": "Shopee055",
-  "version": "com.patiphan.shopee",
-  "description": "A sample Apache Cordova application that responds to the deviceready event.",
-  "author": "Apache Cordova Team",
+  "name": "PSUSecurity",
+  "short_name": "PSUSecurity",
+  "version": "com.soap.sabee",
+  "description": "Application for PSU PHUKET Security",
+  "author": "TEAM PSU PHUKET SE59\r\n        Mrs.Nattida  Noo-Boon  5930213010,\r\n        Mrs.Nisarat  Saelim    5930213021,\r\n        Mrs.Waritsara Bambuttook 5930213022,\r\n        Mrs.Radtanaporn  Choeikan  5930213024,\r\n        Mr.Arunpong Somlok    5930213026,\r\n        Mr.Patiphan Wibunchat 5930213055",
   "icons": [],
   "start_url": "index.html"
 }

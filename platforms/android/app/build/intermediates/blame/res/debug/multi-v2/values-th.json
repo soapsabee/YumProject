@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Soapsabee\\CordovaShopee\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-th\\values-th.xml",
+            "outputFile": "D:\\YumProject\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-th\\values-th.xml",
             "map": [
                 {
                     "source": "C:\\Users\\STD\\.gradle\\caches\\transforms-1\\files-1.1\\zxing-android-embedded-3.3.0.aar\\7a03d96067d47763b3dcf4c635da3559\\res\\values-th\\values-th.xml",

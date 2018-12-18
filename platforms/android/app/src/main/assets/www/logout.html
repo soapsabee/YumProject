@@ -8,9 +8,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
     <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+
     <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-
     <script src="ejs.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
     <script src="cordova.js"></script>
@@ -21,62 +22,54 @@
             authDomain: "psuproject-e92e0.firebaseapp.com",
         };
         firebase.initializeApp(config);
-
-
-
     </script>
-       <style>
-        
-            .page, .page__background, .page__content {
-          background-color: #FF7A1F;
-          position: absolute;
-      }
+
+    <style>
+        .page,
+        .page__background,
+        .page__content {
+            background-color: #FF7A1F;
+            position: absolute;
+        }
+
+        #fon {
+            font-family: 'Kanit', sans-serif;
+        }
     </style>
+
 </head>
 
 <body>
-
-
     <ons-page>
-            <ons-navigator title="Navigator" var="myNavigator" id="myNavigator" page="tab1.html">
-                    <ons-page>
-                        <ons-toolbar style="background-color:#143c6d;" ></ons-toolbar-button>b
-                    
-                      </ons-toolbar>
+        <ons-navigator title="Navigator" var="myNavigator" id="myNavigator" page="tab1.html">
+            <ons-page>
+                <ons-toolbar style="background-color:#143c6d;">
+                    </ons-toolbar-button>b
 
-        <div class="center" style="text-align: center; margin-top:30px; ">
-              
-                <p><img src="https://firebasestorage.googleapis.com/v0/b/psuproject-e92e0.appspot.com/o/img%2Flogo.png?alt=media&token=5480fa2b-35e7-4d90-b14e-8959015d1e25" alt="logo" style="width:auto;"></p>
-                <br>
-         <b>  ท่านต้องการออกจากระบบหรือไม่ ?</b>  <br>
- 
-            <!-- <button   onclick="logout()"class="button--large--cta" style="width: 95%; margin: 10px;background-color:red;">Sign Out</button> -->
-            <ons-button onclick="window.location.href = 'home.html'"style="margin: 10px ;background-color:green;">กลับไปสู่หน้าหลัก</ons-button>
-            
-            <ons-button onclick="logout()"style="margin: 10px ;background-color:red;">ออกจากระบบ</ons-button>
+                </ons-toolbar>
 
-  
+                <div class="center" style="text-align: center; margin-top:30px; ">
+                    <p>
+                        <img src="https://firebasestorage.googleapis.com/v0/b/psuproject-e92e0.appspot.com/o/img%2Flogo.png?alt=media&token=5480fa2b-35e7-4d90-b14e-8959015d1e25"
+                            alt="logo" style="width:auto;">
+                    </p>
+                    <br>
+                    <b id="fon"> ท่านต้องการออกจากระบบหรือไม่ ?</b> <br>
+                    <ons-button onclick="window.location.href = 'home.html'" style="margin: 10px ;background-color:green;" id="fon">กลับไปสู่หน้าหลัก</ons-button>
+                    <ons-button onclick="logout()" style="margin: 10px ;background-color:red;" id="fon">ออกจากระบบ</ons-button>
+                </div>
 
-        </div>
+                <script>
 
-        <script>
+                    function logout() {
+                        firebase.auth().signOut().then(function () {
+                            window.location.href = "login.html";
+                        }).catch(function (error) {
+                            console.log(error);
+                        });
+                    }
 
-            function logout() {
-                
-                firebase.auth().signOut().then(function () {
-                  
-                  
-                    window.location.href="login.html";
-                }).catch(function (error) {
-                    console.log(error);
-                   
-                });
-            
-         }
-
-        
-        </script>
-
+                </script>
 
 </body>
 

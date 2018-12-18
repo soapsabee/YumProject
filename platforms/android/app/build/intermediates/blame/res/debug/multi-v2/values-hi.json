@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Soapsabee\\CordovaShopee\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hi\\values-hi.xml",
+            "outputFile": "D:\\YumProject\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hi\\values-hi.xml",
             "map": [
                 {
                     "source": "C:\\Users\\STD\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.0.aar\\ac88f05d4ae875f3d66528897de556d7\\res\\values-hi\\values-hi.xml",

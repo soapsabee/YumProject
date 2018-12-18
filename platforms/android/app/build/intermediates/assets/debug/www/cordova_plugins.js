@@ -25,6 +25,20 @@ module.exports = [
     ]
   },
   {
+    "id": "cordova-plugin-geolocation.geolocation",
+    "file": "plugins/cordova-plugin-geolocation/www/android/geolocation.js",
+    "pluginId": "cordova-plugin-geolocation",
+    "clobbers": [
+      "navigator.geolocation"
+    ]
+  },
+  {
+    "id": "cordova-plugin-geolocation.PositionError",
+    "file": "plugins/cordova-plugin-geolocation/www/PositionError.js",
+    "pluginId": "cordova-plugin-geolocation",
+    "runs": true
+  },
+  {
     "id": "cordova-plugin-inappbrowser.inappbrowser",
     "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
     "pluginId": "cordova-plugin-inappbrowser",
@@ -48,33 +62,20 @@ module.exports = [
     "clobbers": [
       "universalLinks"
     ]
-  },
-  {
-    "id": "cordova-plugin-geolocation.geolocation",
-    "file": "plugins/cordova-plugin-geolocation/www/android/geolocation.js",
-    "pluginId": "cordova-plugin-geolocation",
-    "clobbers": [
-      "navigator.geolocation"
-    ]
-  },
-  {
-    "id": "cordova-plugin-geolocation.PositionError",
-    "file": "plugins/cordova-plugin-geolocation/www/PositionError.js",
-    "pluginId": "cordova-plugin-geolocation",
-    "runs": true
   }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
+  "cordova-plugin-add-swift-support": "1.7.2",
   "cordova-plugin-browsertab": "0.2.0",
   "cordova-plugin-buildinfo": "2.0.2",
   "cordova-plugin-customurlscheme": "4.3.0",
+  "cordova-plugin-geolocation": "4.0.1",
   "cordova-plugin-inappbrowser": "3.0.0",
   "cordova-plugin-qrscanner": "2.6.0",
   "cordova-plugin-whitelist": "1.3.3",
-  "cordova-universal-links-plugin": "1.2.1",
-  "cordova-plugin-geolocation": "4.0.1"
+  "cordova-universal-links-plugin": "1.2.1"
 };
 // BOTTOM OF METADATA
 });

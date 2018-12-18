@@ -8,33 +8,37 @@
   },
   "installed_plugins": {
     "cordova-plugin-browsertab": {
-      "PACKAGE_NAME": "com.patiphan.shopee"
+      "PACKAGE_NAME": "com.soap.sabee"
     },
     "cordova-plugin-buildinfo": {
-      "PACKAGE_NAME": "com.patiphan.shopee"
+      "PACKAGE_NAME": "com.soap.sabee"
     },
     "cordova-plugin-customurlscheme": {
       "URL_SCHEME": "com.firebase.cordova",
       "ANDROID_SCHEME": " ",
       "ANDROID_HOST": " ",
       "ANDROID_PATHPREFIX": "/",
-      "PACKAGE_NAME": "com.patiphan.shopee"
-    },
-    "cordova-plugin-inappbrowser": {
-      "PACKAGE_NAME": "com.patiphan.shopee"
-    },
-    "cordova-plugin-qrscanner": {
-      "PACKAGE_NAME": "com.patiphan.shopee"
-    },
-    "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.patiphan.shopee"
-    },
-    "cordova-universal-links-plugin": {
-      "PACKAGE_NAME": "com.patiphan.shopee"
+      "PACKAGE_NAME": "com.soap.sabee"
     },
     "cordova-plugin-geolocation": {
-      "PACKAGE_NAME": "com.patiphan.shopee"
+      "PACKAGE_NAME": "com.soap.sabee"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.soap.sabee"
+    },
+    "cordova-plugin-qrscanner": {
+      "PACKAGE_NAME": "com.soap.sabee"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.soap.sabee"
+    },
+    "cordova-universal-links-plugin": {
+      "PACKAGE_NAME": "com.soap.sabee"
     }
   },
-  "dependent_plugins": {}
+  "dependent_plugins": {
+    "cordova-plugin-add-swift-support": {
+      "PACKAGE_NAME": "com.soap.sabee"
+    }
+  }
 }
